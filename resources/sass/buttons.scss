@@ -1,0 +1,41 @@
+@import './breakpoints.scss';
+
+.pricing {
+    // appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+
+    background-color: color.$black;
+    color: color.$white;
+    padding: 1.1em 1.5em;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 7px;
+    font-family: fonts.$font;
+    font-size: 16px;
+    cursor: pointer;
+
+    // @sm {
+    //     padding: 0.5rem 0.6rem;
+    // }
+    i {
+        margin-left: 9px;
+    }
+    &:hover {
+        box-shadow: inset 15rem 0 0 0 color.$lightgrey;
+        transition: ease-out .2s;
+
+    }
+    
+}
+
+
+
+// .pricing:hover {
+//     animation: 0.35s ease-out;
+//     background-color: color.$grey;
+      
+// }
+
+
