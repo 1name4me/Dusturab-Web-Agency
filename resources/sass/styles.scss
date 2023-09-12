@@ -135,7 +135,7 @@ nav {
         color: color.$white;
     }
     .pricing {
-       
+       background-color: color.$button;
         @include md {
             display: none;
         }
@@ -187,8 +187,12 @@ nav {
 
 
 .hero {
-    background-image: color.$hero;
+
+    
+
+    background-color: color.$hero;
     background-size: 100%;
+    // clip-path: polygon(0 0,100% 0,100% calc(100% - 50px),50% 100%,0 calc(100% - 50px));
     .container {
         padding-top: 4rem;
         @include lg {
@@ -271,7 +275,14 @@ nav {
 }
 
 .about {
-    padding: 4rem 0rem;
+    // padding: 4rem 0rem;
+
+    // Start of wavy
+    padding: 0rem 0rem 4rem 0rem;
+    svg {
+        margin-bottom: 4rem;
+    }
+    //end of wavy
     @include xs {
         margin: 1rem 0rem;
     }
@@ -403,7 +414,14 @@ nav {
 }
 
 .process {
-    padding: 4rem 0rem;
+    // padding: 4rem 0rem;
+
+    // start of wavy
+    padding-bottom: 4rem;
+    svg {
+        margin-bottom: 4rem;
+    }
+    //end of wavy
 
     @include xs {
         padding: 4rem 0rem 1rem 0rem;
@@ -493,7 +511,7 @@ nav {
             margin: 0;
         }
     }
-    background-image: color.$hero;
+    background-color: color.$hero;
     padding-bottom: 6rem;
     &__title {
         display: flex;
@@ -614,7 +632,7 @@ nav {
 }
 
 .website-pricing {
-    background-image: color.$hero;
+    background-color: color.$hero;
     background-size: 100%;
     padding-bottom: 2rem;
     &__title {
@@ -653,6 +671,7 @@ nav {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 2rem;
+        
         @include md {
             display: flex;
             flex-direction: column;
@@ -662,8 +681,7 @@ nav {
         }
         .price-card {
             background-color: color.$white;
-            border-radius: 6px;
-            // display: flex;
+            border-radius: 6px;            // display: flex;
             // flex-direction: column;
             // justify-content: center;
             padding: 1rem 2rem;
@@ -856,7 +874,11 @@ nav {
 
 .why {
     background:url("/public/images/bg-1-e1623377154776.png") ;
-    padding: 4rem 0rem;
+    // padding: 4rem 0rem;
+
+    // start of wavy
+    padding-bottom: 4rem;
+    //end of wavy
     .container {
         
     }
