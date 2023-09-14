@@ -64,11 +64,16 @@ nav {
     display: flex;
     justify-content: space-between;
     background-color: #ffffff; 
+    align-items: center;
     .logo {
         color: color.$black;
         font-weight: 700;
         text-transform: uppercase;
         align-self: center;
+        img {
+            max-width: 40%;
+            height: auto;
+        }
     }
     .menu {
         display: none;
@@ -110,10 +115,11 @@ nav {
 
     
     .nav-links a {
+        text-align: center;
         color: color.$black;
         margin: 0.5em 1.5rem;
         size: 1rem;
-        font-weight: 600;
+        font-weight: 700;
         @include md {
             display: none;
         }
@@ -122,8 +128,8 @@ nav {
         }
     }
     .nav-links a:nth-child(4) {
-        background-color: color.$black;
-        color: color.$white;
+        background-color: color.$button;
+       color: color.$white;
     }
     .nav-links a:nth-child(4):hover {
         color: color.$white;
@@ -135,7 +141,7 @@ nav {
         color: color.$white;
     }
     .pricing {
-       background-color: color.$button;
+       
         @include md {
             display: none;
         }
@@ -185,14 +191,15 @@ nav {
     
 }
 
-
 .hero {
 
-    
-
     background-color: color.$hero;
+    // background-repeat: no-repeat; 
     background-size: 100%;
+    // border-radius: 0 0 790% 90% / 10em;
     // clip-path: polygon(0 0,100% 0,100% calc(100% - 50px),50% 100%,0 calc(100% - 50px));
+
+
     .container {
         padding-top: 4rem;
         @include lg {
@@ -203,7 +210,7 @@ nav {
         }
     }
     &__title {
-        font-size: 4.5rem;
+        font-size: 4rem;
         font-weight: 700;
         color: color.$white;
         margin-bottom: 0.5em;
@@ -351,7 +358,7 @@ nav {
     .section-maintitle {
         text-transform: uppercase;
         font-weight: 700;
-        color: color.$brown;
+        color: color.$button;
         text-decoration: underline;
         padding-top: 1rem;
         @include xs {
@@ -422,7 +429,7 @@ nav {
         margin-bottom: 4rem;
     }
     //end of wavy
-
+    
     @include xs {
         padding: 4rem 0rem 1rem 0rem;
     }
@@ -436,7 +443,7 @@ nav {
     .section-maintitle {
         text-transform: uppercase;
         font-weight: 600;
-        color: color.$brown;
+        color: color.$button;
         text-decoration: underline;
     }
     .section-subtitle {
@@ -455,8 +462,9 @@ nav {
     }
     &__container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-content: center;
+        // grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        // justify-content: center;
         @include md {
             grid-template-columns: repeat(2, 1fr);
         }
@@ -466,42 +474,64 @@ nav {
     }
  
     img {
-        max-width: 17%;
-        height: auto;
+        // max-width: 17%;
+        max-width: 14%;
+        max-height: 35%;
         display: block;
+        margin: 1rem 2rem 0rem 0rem;
         @include xs {
             max-width: 20%;
         }
     }
     .quality {
-        
+        display: flex;
         // margin: 0rem 5rem 2rem 0rem;
         margin: 0rem 0rem 2rem 0rem;
         max-width: 90%;
         justify-self: end;
+        .grouped {
+            display: flex;
+            flex-direction: column;
+        }
         @include xs {
             margin: 0rem 0rem 2.5rem 0rem;
         }
         &__title {
-            font-size: 1.5rem;
-            font-weight: 600;
+            font-size: 1.4rem;
+            font-weight: 700;
             color: color.$grey;
-            padding: 1.5rem 0rem;
+            // padding: 1.5rem 0rem;
+            padding: 1.5rem 0rem 1rem 0rem;
         }
         &__description {
             font-size: 1.125rem;
             font-weight: 400;
             color: color.$lightgrey;
             line-height: 28px;
-            max-width: 80%;
+            max-width: 90%;
             span {
-                color: color.$brown;
+                color: color.$button;
                 text-decoration: underline;
             }
         }
     }
+    .quality:nth-child(1) {
+        margin-top: 7rem;
+    }
+    .quality:nth-child(2) {
+        margin-bottom: 7rem;
+    }
+    .quality:nth-child(4) {
+        margin-bottom: 7rem;
+    }
     .quality:nth-child(3) {
-        // justify-self: center;
+        margin-top: 7rem;
+    }
+    .quality:nth-child(5) {
+        margin-top: 7rem;
+    }
+    .quality:nth-child(6) {
+        margin-bottom: 7rem;
     }
 }
 
@@ -511,7 +541,9 @@ nav {
             margin: 0;
         }
     }
-    background-color: color.$hero;
+    background-image: color.$hero;
+    background-repeat: no-repeat; 
+    background-size: 100%;
     padding-bottom: 6rem;
     &__title {
         display: flex;
@@ -523,7 +555,7 @@ nav {
     .section-maintitle {
         text-transform: uppercase;
         font-weight: 600;
-        color: color.$brown;
+        color: color.$button;
         @include xs {
             font-size: 0.9rem;
         }
@@ -612,7 +644,7 @@ nav {
                     background: none;
 
                     padding: 1.7rem 2rem;
-                    background-color: color.$brown;
+                    background-color: color.$button;
                     border-radius: 5px;
                     cursor: pointer;
                     transition: 0.4s;
@@ -632,8 +664,8 @@ nav {
 }
 
 .website-pricing {
-    background-color: color.$hero;
-    background-size: 100%;
+    background-image: color.$hero;
+    // background-size: 10%;
     padding-bottom: 2rem;
     &__title {
         display: flex;
@@ -645,7 +677,7 @@ nav {
     .section-maintitle {
         text-transform: uppercase;
         font-weight: 700;
-        color: color.$brown;
+        color: color.$button;
         text-decoration: underline;
         @include xs {
             font-size: 0.9rem;
@@ -668,9 +700,10 @@ nav {
     }
 
     .pricing-cards {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        // display: grid;
+        // grid-template-columns: repeat(3, 1fr);
         grid-gap: 2rem;
+        display: flex;
         
         @include md {
             display: flex;
@@ -681,14 +714,13 @@ nav {
         }
         .price-card {
             background-color: color.$white;
-            border-radius: 6px;            // display: flex;
-            // flex-direction: column;
-            // justify-content: center;
+            border-radius: 8px; 
             padding: 1rem 2rem;
             text-align: center;
+            box-shadow: 2px 5px 10px #999;
             &__title {
                 font-size: 1.5rem;
-                color: color.$brown;
+                color: color.$button;
                 font-weight: 700;
                 padding-bottom: 2rem;
             }
@@ -721,7 +753,7 @@ nav {
                 font-size: 2.3rem;
                 font-weight: 700;
                 margin: 2rem 0rem;
-                color: color.$brown;
+                color: color.$button;
             }
             hr {
                 border: none;
@@ -749,14 +781,14 @@ nav {
 
                 color: color.$black;
                 background-color: transparent;
-                border: 1px dashed color.$lightgrey;
+                border: 1px solid color.$button;
                 padding: 1rem;
                 font-size: 0.9rem;
                 text-transform: uppercase;
                 font-weight: 700;
                 cursor: pointer;
                 &:hover {
-                    box-shadow: inset 15rem 0 0 0 color.$brown;
+                    box-shadow: inset 15rem 0 0 0 color.$button;
                     transition: ease-out .2s;
             
                 }
@@ -764,7 +796,7 @@ nav {
         }
     }
     .price-card:nth-child(2){
-        border: 6px solid color.$brown;
+        border: 6px solid color.$button;
     }
     .price-note {
         text-align: center;
@@ -795,7 +827,7 @@ nav {
     .section-maintitle {
         text-transform: uppercase;
         font-weight: 700;
-        color: color.$brown;
+        color: color.$button;
         text-decoration: underline;
         @include xs {
             font-size: 0.9rem;
@@ -845,7 +877,7 @@ nav {
             &__title {
                 font-size: 4rem;
                 font-weight: 600;
-                color: color.$brown;
+                color: color.$button;
             }
             &__subtitle {
                 font-size: 1.5rem;
@@ -961,7 +993,7 @@ nav {
 }
 
 footer {
-    background: color.$grey;
+    background: color.$white;
     .container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -971,18 +1003,14 @@ footer {
         }
         .footer-overview {
             .company-logo {
-                font-size: 1.5rem;
-                font-style: italic;
-                color: color.$white;
-                text-decoration: line-through;
-                @include xs {
-                    margin-top: 2rem;
+                img {
+                    max-width: 30%;
                 }
             }
             .company-description {
                 font-size: 1.2rem;
                 color: color.$lightgrey;
-                margin: 2rem 0rem;
+                margin: 2rem 0rem 3rem 0rem;
                 max-width: 60%;
                 line-height: 28px;
                 @include md {
@@ -1004,7 +1032,7 @@ footer {
                 font-weight: 600;
                 // margin: 17px 0px 22px;
                 line-height: 28px;
-                color: color.$white;
+                color: color.$grey;
                 padding-bottom: 1rem;
                 
             }
@@ -1027,7 +1055,7 @@ footer {
                 font-weight: 600;
                 // margin: 17px 0px 22px;
                 line-height: 28px;
-                color: color.$white;
+                color: color.$grey;
                 padding-bottom: 1rem;
             }
             .contact-email, .contact-based {
@@ -1043,7 +1071,7 @@ footer {
         
     }
     .copyright-section {
-        background-color: color.$lightgrey;
+        background-color: color.$hero;
         .container {
             padding: 2rem 0rem;
             display: flex;
@@ -1066,7 +1094,7 @@ footer {
         
     }
     hr {
-        border: 1px solid color.$brown;
+        border: 1px solid color.$button;
         margin-bottom: 2rem;
     }
 }

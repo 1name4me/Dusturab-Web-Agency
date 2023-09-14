@@ -17,7 +17,7 @@
     <header id="header">
         <div class="container">
             <nav id="nav">
-                <a href="#home" class="logo">DT Agency</a>
+                <a href="#home" class="logo"><img src="/images/header_logo.png" alt=""></a>
                 <!-- <a href="#" class="hamburg-icon">
                     <i class="fa fa-bars"></i>
                 </a> -->
@@ -63,8 +63,8 @@
     
     <section class="about" id="about">
 
-        <svg class="separator" width="100%" height="70" viewBox="0.1 0.1 180 40" preserveAspectRatio="none">
-            <g transform="translate(-18.298844,-77.973964)">
+        <svg class="separator" width="100%" height="40" viewBox="0.1 0.1 180 40" preserveAspectRatio="none">
+            <g transform="translate(-18.298844, -77.973964)">
                 <path style="fill:#1F2740;" d="M 31.615583,86.351641 H 192.16499 v 26.901969 c 0,0 -32.03411,-14.237983 -59.62682,-12.72484 -22.34188,1.2252 -54.779359,9.72634 -54.779359,9.72634 0,0 -22.029534,3.62882 -34.471238,-1.88988 -12.441702,-5.51871 -11.67199,-22.013589 -11.67199,-22.013589 z" />
                 <path style="fill:#1F2740;" d="M 18.441597,78.106256 H 198.58126 v 39.288614 c 0,0 -43.10672,-27.825245 -73.47599,-19.687823 -30.369264,8.137423 -46.832208,12.548653 -46.832208,12.548653 0,0 -32.775418,8.05972 -46.735258,0 C 17.577964,102.19598 18.441597,78.106256 18.441597,78.106256 Z" />
             </g>
@@ -82,7 +82,7 @@
                     <!-- <a href="#" class="about">about us</a> -->
                 </div>
                 <div class="about__container-grid2">
-                    <img src="/images/a8327690-3e3f-4be2-8a0e-ff100010ef40_cover.png">
+                    <img src="/images/hero/RR-v-july-2022-11.webp">
                 </div>
                 <div class="about__container-grid3">
                     <p class="about__description">A lot of websites dont follow both basic and advanced UX design practices, This causes the website to be less converting (loss of sales & leads),
@@ -152,38 +152,50 @@
             <div class="process__container">
                 <div class="quality">
                     <img src="/images/website-speed-optimization.png">
-                    <div class="quality__title">Speed Optimized</div>
-                    <p class="quality__description">Your site will be developed with <span>speed optimization</span> in mind and performance in mind. No site should be slow for its users losing out on customers.</p>
+                    <div class="grouped">
+                        <div class="quality__title">Speed Optimized</div>
+                        <p class="quality__description">Your site will be developed with <span>speed optimization</span> in mind and performance in mind. No site should be slow for its users losing out on customers.</p>
+                    </div>
                 </div>
     
                 <div class="quality">
                     <img src="/images/conversion-optimized-website.png">
-                    <div class="quality__title">Conversion Optimized</div>
-                    <p class="quality__description">I know the little tricks that can push people to convert from a visitor to a customer. I help make your site pay for itself.</p>
+                    <div class="grouped">
+                        <div class="quality__title">Conversion Optimized</div>
+                        <p class="quality__description">I know the little tricks that can push people to convert from a visitor to a customer. I help make your site pay for itself.</p>
+                    </div>
                 </div>
     
                 <div class="quality">
                     <img src="/images/responsive-web-design.png">
-                    <div class="quality__title">Mobile Optimized</div>
-                    <p class="quality__description">52% of people are viewing websites on a phone. I know its more than just important so its standard that every page is responsive.</p>
+                    <div class="grouped">
+                        <div class="quality__title">Mobile Optimized</div>
+                        <p class="quality__description">52% of people are viewing websites on a phone. I know its more than just important so its standard that every page is responsive.</p>
+                    </div>
                 </div>
     
                 <div class="quality">
                     <img src="/images/customizable-websites.png">
-                    <div class="quality__title">Customizable</div>
-                    <p class="quality__description">Your site will be easy enough to customize that anyone can pick it up to make a change big or small, from text changes to new pages</p>
+                    <div class="grouped">
+                        <div class="quality__title">Customizable</div>
+                        <p class="quality__description">Your site will be easy enough to customize that anyone can pick it up to make a change big or small, from text changes to new pages</p>
+                    </div>
                 </div>
     
                 <div class="quality">
                     <img src="/images/seo-optimized-web-design.png">
-                    <div class="quality__title">SEO Optimized</div>
-                    <p class="quality__description">SEO is the next important step after launching your website. Your site will follow the best SEO practices to begin its ranking.</p>
+                    <div class="grouped">
+                        <div class="quality__title">SEO Optimized</div>
+                        <p class="quality__description">SEO is the next important step after launching your website. Your site will follow the best SEO practices to begin its ranking.</p>
+                    </div>
                 </div>
     
                 <div class="quality">
                     <img src="/images/006-website-design.png">
-                    <div class="quality__title">Perfectly Branded</div>
-                    <p class="quality__description">Your website won’t be from a cookie-cutter layout. It will be designed to fit the style of your brand (fonts, colors, ect).</p>
+                    <div class="grouped">
+                        <div class="quality__title">Perfectly Branded</div>
+                        <p class="quality__description">Your website won’t be from a cookie-cutter layout. It will be designed to fit the style of your brand (fonts, colors, ect).</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -263,12 +275,7 @@
 
     <section class="design-process">
 
-        <svg class="separator" width="100%" height="70" viewBox="0.1 0.1 180 40" preserveAspectRatio="none">
-            <g transform="translate(-18.298844,-77.973964)">
-                <path style="fill:#1F2740;" d="M 31.615583,86.351641 H 192.16499 v 26.901969 c 0,0 -32.03411,-14.237983 -59.62682,-12.72484 -22.34188,1.2252 -54.779359,9.72634 -54.779359,9.72634 0,0 -22.029534,3.62882 -34.471238,-1.88988 -12.441702,-5.51871 -11.67199,-22.013589 -11.67199,-22.013589 z" />
-                <path style="fill:#1F2740;" d="M 18.441597,78.106256 H 198.58126 v 39.288614 c 0,0 -43.10672,-27.825245 -73.47599,-19.687823 -30.369264,8.137423 -46.832208,12.548653 -46.832208,12.548653 0,0 -32.775418,8.05972 -46.735258,0 C 17.577964,102.19598 18.441597,78.106256 18.441597,78.106256 Z" />
-            </g>
-        </svg>
+        
 
         <div class="container">
             <div class="design-process__title">
@@ -526,7 +533,7 @@
     <footer>
         <div class="container">
             <div class="footer-overview">
-                <div class="company-logo">Dutsturab</div>
+                <div class="company-logo"><img src="/images/footer_logo.png" alt=""></div>
                 <p class="company-description">A family run web design agency in Birmingham, Uk where we create affordable websites for small to medium businesses</p>
                 <!-- <button href="#" class="pricing">Get a website<i class="fa-solid fa-arrow-right"></i></button> -->
                 <a class="pricing" href="#pricing">website pricing<i class="fa-solid fa-arrow-right"></i></a>
