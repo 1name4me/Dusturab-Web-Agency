@@ -61,7 +61,8 @@ menuLinks.forEach(
 
 logo.addEventListener("click", () => {
     menu.classList.remove("showMenu")
+    closeIcon.style.display = "none"
+    menuIcon.style.display = "block"
 })
-
 
 // --------------

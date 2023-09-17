@@ -63,12 +63,12 @@
     
     <section class="about" id="about">
 
-        <svg class="separator" width="100%" height="40" viewBox="0.1 0.1 180 40" preserveAspectRatio="none">
+        <!-- <svg class="separator" width="100%" height="40" viewBox="0.1 0.1 180 40" preserveAspectRatio="none">
             <g transform="translate(-18.298844, -77.973964)">
                 <path style="fill:#1F2740;" d="M 31.615583,86.351641 H 192.16499 v 26.901969 c 0,0 -32.03411,-14.237983 -59.62682,-12.72484 -22.34188,1.2252 -54.779359,9.72634 -54.779359,9.72634 0,0 -22.029534,3.62882 -34.471238,-1.88988 -12.441702,-5.51871 -11.67199,-22.013589 -11.67199,-22.013589 z" />
                 <path style="fill:#1F2740;" d="M 18.441597,78.106256 H 198.58126 v 39.288614 c 0,0 -43.10672,-27.825245 -73.47599,-19.687823 -30.369264,8.137423 -46.832208,12.548653 -46.832208,12.548653 0,0 -32.775418,8.05972 -46.735258,0 C 17.577964,102.19598 18.441597,78.106256 18.441597,78.106256 Z" />
             </g>
-        </svg>
+        </svg> -->
 
 
         <div class="container">
@@ -332,7 +332,6 @@
             </div>
             <div class="reasons">
                 <div class="reason-container">
-                    <i class="far fa-check-square"></i>
                     <div class="reason-container__title">Your customers will take your business seriously</div>
                     <p class="reason-container__description">
                         A bad outdated website design can easily dissuade people from going with your business. 
@@ -340,7 +339,6 @@
                     </p>
                 </div>
                 <div class="reason-container">
-                    <i class="far fa-check-square"></i>
                     <div class="reason-container__title">It will be very easy for your customers to contact you</div>
                     <p class="reason-container__description">
                         A bad outdated website design can easily dissuade people from going with your business. 
@@ -348,7 +346,6 @@
                     </p>
                 </div>
                 <div class="reason-container">
-                    <i class="far fa-check-square"></i>
                     <div class="reason-container__title">They will understand what you do and who you are</div>
                     <p class="reason-container__description">
                         A bad outdated website design can easily dissuade people from going with your business. 
@@ -473,62 +470,45 @@
 
     <section class="contact" id="contact">
         <div class="container">
+            
             <div class="contact__title">
                 <div class="section-maintitle">contact us</div>
                 <div class="section-subtitle">Let's start the dicussion for your website project!</div>
             </div>
-            
-            <form action="">
-                    <div class="input">
-                        <label for="input__title">name*</label>
-                        <input 
-                        type="text" 
-                        name="firstname"
-                        id="firstname"
-                        class="form-element"
-                        required
-                        placeholder="Name"/>
-                        <i></i>
-                    </div>
-                    <div class="input">
-                        <label for="input__title">email*</label>
-                        <input 
-                        type="email" 
-                        name="email"
-                        id="email"
-                        class="form-element"
-                        required
-                        placeholder="johndoe@exmaple.com"/>
-                        <i></i>
-                    </div>
-                    <div class="input">
-                        <label for="input__title">phone</label>
-                        <input 
-                        type="text" 
-                        name="phone"
-                        id="phone"
-                        class="form-element"
-                        placeholder="Phone"/>
-                        <i></i>
-                    </div>
-                    <div class="input full">
-                        <label for="input__title">Message*</label>
-                        <textarea 
-                        name="message"
-                        id="message"
-                        class="form-element"
-                        placeholder="Talk about your website project. Any requirements, ideas, goals, or examples to get the discussion started.">
-                        </textarea>
-                    </div>
-                    <div class="submit-group">
-                        <input type="submit" value="send message (We'll reply back!)">
-                    </div>
-            </form>
-            
-    
-            <!-- <button class="sendmessage" href="#"><span>send message</span></button> -->
-        </div>
-    </section>
+        @if (Session::has('success'))
+            <div class="alert" style="color: blue" >
+                {{Session::get('success')}}
+            </div>
+        @endif
+        <form action=" {{ route('send_mail') }} " method="POST">
+            @csrf    
+            <div class="input">
+                <label for="input__title">name*</label>
+                <input type="text" name="name" id="firstname" class="form-element" required placeholder="Name" />
+                <i></i>
+            </div>
+            <div class="input">
+                <label for="input__title">email*</label>
+                <input type="email" name="email" id="email" class="form-element" required placeholder="johndoe@exmaple.com" />
+                <i></i>
+            </div>
+            <div class="input">
+                <label for="input__title">phone</label>
+                <input type="text" name="phone" id="phone" class="form-element" placeholder="Phone" />
+                <i></i>
+            </div>
+            <div class="input full">
+                <label for="input__title">Message*</label>
+                <textarea name="message" id="message" class="form-element"
+                    placeholder="Talk about your website project. Any requirements, ideas, goals, or examples to get the discussion started.">
+                </textarea>
+            </div>
+            <div class="submit-group">
+                <input type="submit" value="send message (We'll reply back!)">
+            </div>
+        </form>
+                </div>
+            </section>
 
     <footer>
         <div class="container">
@@ -564,7 +544,6 @@
             
         </div>
     </footer>
-   
-<script type="module" src="index.js"></script>
+    <!-- <script src="{{ asset('js/script.js') }}"></script> -->
 </body>
 </html>

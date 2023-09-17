@@ -11,8 +11,12 @@ scroll-padding: var(--scroll-padding, 30rem);
 .container {
     margin: 0rem 22rem;
     max-width: 70%;
-    @include lg {
+    @include xxl {
         margin: 0rem 5rem;
+        max-width: 100%;
+    }
+    @include lg {
+        margin: 0rem 1rem;
         max-width: 100%;
     }
     @include md {
@@ -37,7 +41,7 @@ header {
         padding: 1.5rem 0rem;
     }
     @include md {
-        padding: 1.7rem 0rem;
+        padding: 1.5rem 0rem;
 
     }
     @include xs {
@@ -73,20 +77,33 @@ nav {
         img {
             max-width: 40%;
             height: auto;
+            @include md {}
         }
     }
     .menu {
         display: none;
         @include md{
-            display: flex;
-            flex-direction: column;
+            visibility: hidden;
+            opacity: 0;
             position: fixed;
-            transition: ease-in .2s;
-            top: -200;
+            transition:  ease-in .2s;
             left: 0;
+            z-index: 1;
+            display: none;
+            background-color: color.$white;
             min-width: 100%;
-            z-index: 99;
-            background: color.$white;
+            box-shadow: 5px 16px 16px  rgba(0, 0, 0, 0.1);
+            // animation: slideDown 0.35s ease-out;
+
+            // display: flex;
+            // flex-direction: column;
+            // position: fixed;
+            // transition: ease-in .2s;
+            // top: -30%;
+            // left: 0;
+            // min-width: 100%;
+            // z-index: 99;
+            // background: color.$white;
             
             list-style: none;
         }
@@ -95,6 +112,7 @@ nav {
             margin-bottom: 2rem;
             color: color.$black;
             padding: 1rem 0rem 0rem 4rem;
+        
             @include xs {
                 padding: 1rem 0rem 0rem 1rem; 
             }
@@ -109,11 +127,13 @@ nav {
         }
     } 
     .showMenu {
-        // height: 47vh;
-        top: 70;
+        top: 10%;
+        visibility: visible;
+        opacity: 1;
+        display: block;
     }
 
-    
+  
     .nav-links a {
         text-align: center;
         color: color.$black;
@@ -193,7 +213,7 @@ nav {
 
 .hero {
 
-    background-color: color.$hero;
+    background-image: color.$hero;
     // background-repeat: no-repeat; 
     background-size: 100%;
     // border-radius: 0 0 790% 90% / 10em;
@@ -282,10 +302,10 @@ nav {
 }
 
 .about {
-    // padding: 4rem 0rem;
+    padding: 4rem 0rem;
 
     // Start of wavy
-    padding: 0rem 0rem 4rem 0rem;
+    // padding: 0rem 0rem 4rem 0rem;
     svg {
         margin-bottom: 4rem;
     }
@@ -431,7 +451,10 @@ nav {
     //end of wavy
     
     @include xs {
-        padding: 4rem 0rem 1rem 0rem;
+        // padding: 4rem 0rem 1rem 0rem;
+
+        //start of wavy
+        padding-bottom: 1rem;
     }
     background: url("/public/images/bg-1-e1623377154776.png");
     &__title {
@@ -463,7 +486,7 @@ nav {
     &__container {
         display: grid;
         // grid-template-columns: repeat(3, 1fr);
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         // justify-content: center;
         @include md {
             grid-template-columns: repeat(2, 1fr);
@@ -475,7 +498,7 @@ nav {
  
     img {
         // max-width: 17%;
-        max-width: 14%;
+        max-width: 18%;
         max-height: 35%;
         display: block;
         margin: 1rem 2rem 0rem 0rem;
@@ -515,24 +538,24 @@ nav {
             }
         }
     }
-    .quality:nth-child(1) {
-        margin-top: 7rem;
-    }
-    .quality:nth-child(2) {
-        margin-bottom: 7rem;
-    }
-    .quality:nth-child(4) {
-        margin-bottom: 7rem;
-    }
-    .quality:nth-child(3) {
-        margin-top: 7rem;
-    }
-    .quality:nth-child(5) {
-        margin-top: 7rem;
-    }
-    .quality:nth-child(6) {
-        margin-bottom: 7rem;
-    }
+    // .quality:nth-child(1) {
+    //     margin-top: 7rem;
+    // }
+    // .quality:nth-child(2) {
+    //     margin-bottom: 7rem;
+    // }
+    // .quality:nth-child(4) {
+    //     margin-bottom: 7rem;
+    // }
+    // .quality:nth-child(3) {
+    //     margin-top: 7rem;
+    // }
+    // .quality:nth-child(5) {
+    //     margin-top: 7rem;
+    // }
+    // .quality:nth-child(6) {
+    //     margin-bottom: 7rem;
+    // }
 }
 
 .contact {
@@ -545,6 +568,15 @@ nav {
     background-repeat: no-repeat; 
     background-size: 100%;
     padding-bottom: 6rem;
+    @include xs {
+        background-repeat: repeat;
+    }
+    @include md {
+        // background-repeat: repeat;
+    }
+    @include lg {
+        background-repeat: repeat;
+    }
     &__title {
         display: flex;
         flex-direction: column;
@@ -1005,10 +1037,13 @@ footer {
             .company-logo {
                 img {
                     max-width: 30%;
+                    @include xs {
+                        max-width: 20%;
+                    }
                 }
             }
             .company-description {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
                 color: color.$lightgrey;
                 margin: 2rem 0rem 3rem 0rem;
                 max-width: 60%;
@@ -1071,12 +1106,12 @@ footer {
         
     }
     .copyright-section {
-        background-color: color.$hero;
+        background-color: color.$footer;
         .container {
             padding: 2rem 0rem;
             display: flex;
             justify-content: space-between;
-            color: color.$white;
+            color: color.$grey;
             font-size: 1.1rem;
             @include xs {
                 flex-direction: column;
