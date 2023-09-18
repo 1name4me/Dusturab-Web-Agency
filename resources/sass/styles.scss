@@ -77,7 +77,6 @@ nav {
         img {
             max-width: 40%;
             height: auto;
-            @include md {}
         }
     }
     .menu {
@@ -93,18 +92,6 @@ nav {
             background-color: color.$white;
             min-width: 100%;
             box-shadow: 5px 16px 16px  rgba(0, 0, 0, 0.1);
-            // animation: slideDown 0.35s ease-out;
-
-            // display: flex;
-            // flex-direction: column;
-            // position: fixed;
-            // transition: ease-in .2s;
-            // top: -30%;
-            // left: 0;
-            // min-width: 100%;
-            // z-index: 99;
-            // background: color.$white;
-            
             list-style: none;
         }
         
@@ -120,14 +107,14 @@ nav {
                 color: black;
                 font-size: 1.1rem;
                 &:hover {
-                    color: color.$brown;
+                    color: color.$button;
                 }
             }
             
         }
     } 
     .showMenu {
-        top: 10%;
+        top: 9%;
         visibility: visible;
         opacity: 1;
         display: block;
@@ -138,8 +125,9 @@ nav {
         text-align: center;
         color: color.$black;
         margin: 0.5em 1.5rem;
-        size: 1rem;
+        font-size: 1rem;
         font-weight: 700;
+        text-transform: uppercase;
         @include md {
             display: none;
         }
@@ -155,7 +143,7 @@ nav {
         color: color.$white;
     }
     .nav-links a:hover {
-        color: color.$brown
+        color: color.$button;
     }
     .pricing:hover {
         color: color.$white;
@@ -176,15 +164,6 @@ nav {
         display: none;
         
         @include md {
-
-            // display: block;
-            // position: absolute;
-            // right: 20;
-            // top: 20;
-            // border: 2px solid color.$lightgrey;
-            // padding: 0.5rem 0.7rem;
-            // background: transparent;
-
             display: block;
             position: fixed;
             z-index: 100;
@@ -212,18 +191,22 @@ nav {
 }
 
 .hero {
-
     background-image: color.$hero;
-    // background-repeat: no-repeat; 
     background-size: 100%;
-    // border-radius: 0 0 790% 90% / 10em;
-    // clip-path: polygon(0 0,100% 0,100% calc(100% - 50px),50% 100%,0 calc(100% - 50px));
-
-
+    border-radius: 0 0 790% 90% / 10em;
+    @include md {
+        background-size: 130%;
+    }
+    @include xs {
+        background-size: 200%;   
+    }
     .container {
-        padding-top: 4rem;
+        padding-top: 5rem;
         @include lg {
             padding-top: 2rem;
+        }
+        @include md {
+            padding-bottom: 2rem;
         }
         @include xs {
             padding-top: 3rem;
@@ -234,16 +217,16 @@ nav {
         font-weight: 700;
         color: color.$white;
         margin-bottom: 0.5em;
-        max-width: 80%;
+        max-width: 60%;
         @include lg {
             max-width: 70%;
         }
         @include md {
-            font-size: 4rem;
+            font-size: 3rem;
             max-width: 100%;
         }
         @include xs {
-            font-size: 3rem;
+            font-size: 2rem;
             max-width: 100%;
         }
     }
@@ -259,14 +242,12 @@ nav {
         }
         
         @include md {
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             max-width: 95%;
-            margin-bottom: 2em;
         }
         @include xs {
-            font-size: 1.15rem;
+            font-size: 1rem;
             max-width: 95%;
-            margin-bottom: 2em;
         }
     }
     
@@ -297,7 +278,7 @@ nav {
         @include md {}
     }
     .hero-contact_me:hover {
-        color: color.$brown;
+        color: color.$button;
     }
 }
 
@@ -315,7 +296,7 @@ nav {
     }
     &__container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
         justify-content: center;
         @include md {
             display: flex;
@@ -414,25 +395,10 @@ nav {
     span {
         font-style: italic;
     }
-
-    // -----------------------------
-    // .about {
-    //     color: color.$lightgrey;
-    //     text-transform: capitalize;
-    //     font-weight: 600;
-    //     text-decoration: underline;
-    // }
-    // .about:hover {
-    //     color: color.$brown;
-    // }
-    // -----------------------------
-
+    
     .company-name {
         margin-top: 3rem;
-        font-size: 1.5rem;
-        font-style: italic;
-        color: color.$black;
-        text-decoration: line-through;
+        
         @include xs {
             margin-top: 2rem;
             text-align: center;
@@ -441,8 +407,6 @@ nav {
 }
 
 .process {
-    // padding: 4rem 0rem;
-
     // start of wavy
     padding-bottom: 4rem;
     svg {
@@ -451,8 +415,6 @@ nav {
     //end of wavy
     
     @include xs {
-        // padding: 4rem 0rem 1rem 0rem;
-
         //start of wavy
         padding-bottom: 1rem;
     }
@@ -488,6 +450,9 @@ nav {
         // grid-template-columns: repeat(3, 1fr);
         grid-template-columns: repeat(3, 1fr);
         // justify-content: center;
+        @include lg {
+            grid-template-columns: repeat(2, 1fr);
+        }
         @include md {
             grid-template-columns: repeat(2, 1fr);
         }
@@ -502,22 +467,24 @@ nav {
         max-height: 35%;
         display: block;
         margin: 1rem 2rem 0rem 0rem;
+        @include md {
+            max-height: 25%;
+        }
         @include xs {
             max-width: 20%;
         }
+
     }
     .quality {
-        display: flex;
+        // display: flex;
         // margin: 0rem 5rem 2rem 0rem;
         margin: 0rem 0rem 2rem 0rem;
         max-width: 90%;
         justify-self: end;
-        .grouped {
-            display: flex;
-            flex-direction: column;
-        }
+        
         @include xs {
             margin: 0rem 0rem 2.5rem 0rem;
+            display: flex;
         }
         &__title {
             font-size: 1.4rem;
@@ -558,147 +525,11 @@ nav {
     // }
 }
 
-.contact {
-    .container {
-        @include xs {
-            margin: 0;
-        }
-    }
-    background-image: color.$hero;
-    background-repeat: no-repeat; 
-    background-size: 100%;
-    padding-bottom: 6rem;
-    @include xs {
-        background-repeat: repeat;
-    }
-    @include md {
-        // background-repeat: repeat;
-    }
-    @include lg {
-        background-repeat: repeat;
-    }
-    &__title {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 4rem;
-        
-    }
-    .section-maintitle {
-        text-transform: uppercase;
-        font-weight: 600;
-        color: color.$button;
-        @include xs {
-            font-size: 0.9rem;
-        }
-    }
-    .section-subtitle {
-        font-size: 2.5rem;
-        font-weight: 600;
-        margin: 17px 0px 22px;
-        line-height: 48px;
-        color: color.$white;
-        padding-bottom: 2rem;
-        max-width: 60%;
-        text-align: center;
-        @include md {
-            max-width: 100%;
-        }
-        @include xs {
-            font-size: 1.8rem;
-            line-height: 32px;
-            max-width: 100%;
-        }
-    }
-
-    form {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 16px;
-            @include md {
-                grid-template-columns: 1fr;
-                // display: flex;
-                // flex-direction: column;
-            }
-            @include xs {
-                grid-template-columns: 1fr;
-                margin: 0rem 1rem 0rem 1rem;
-            }
-            .input {
-                // margin-right: 2.5rem;
-                display: inherit;
-                &.full {
-                    grid-column: 1 / -1;
-                    min-width: 100%;
-                }
-
-                label {
-                    display: block;
-                    margin-bottom: 5px;
-                    font-size: 2rem;
-                    color: color.$contact;
-                    font-size: 0.938rem;
-                    line-height: 28px;
-                    text-transform: uppercase;
-                    margin-bottom: 0.2rem;
-                }
-                .form-element {
-                    appearance: none;
-                    outline: none;
-                    border: none;
-
-                    display: block;
-                    // min-width: 100%;
-                    border-radius: 8px;
-                    padding: 20px 19px;
-                    @include xs {
-                        // padding: 20px 0px;
-                    }
-                    &:focus {
-                        outline: 2px solid color.$brown;
-                    }
-                }
-                textarea {
-                    resize: vertical;
-                    min-height: 10rem;
-                    font-size: 1rem;
-                }
-                input {
-                    font-size: 1rem;
-                }
-            }
-            .submit-group {
-                grid-column: 1 / -1;
-                input[type="submit"] {
-                    appearance: none;
-                    border: none;
-                    outline: none;
-                    background: none;
-
-                    padding: 1.7rem 2rem;
-                    background-color: color.$button;
-                    border-radius: 5px;
-                    cursor: pointer;
-                    transition: 0.4s;
-                    color: color.$white;
-                    text-transform: uppercase;
-                    font-weight: 600;
-                    min-width: 100%;
-                    font-size: 1.1rem;
-                    margin-top: 1.5rem;
-                    &:hover {
-                        // background-color: ;
-                    }
-                }
-            }
-    }
-    
-}
-
 .website-pricing {
     background-image: color.$hero;
-    // background-size: 10%;
+    background-size: 100%;
     padding-bottom: 2rem;
+    border-radius: 0 0 790% 90% / 10em;
     &__title {
         display: flex;
         flex-direction: column;
@@ -749,7 +580,6 @@ nav {
             border-radius: 8px; 
             padding: 1rem 2rem;
             text-align: center;
-            box-shadow: 2px 5px 10px #999;
             &__title {
                 font-size: 1.5rem;
                 color: color.$button;
@@ -822,7 +652,6 @@ nav {
                 &:hover {
                     box-shadow: inset 15rem 0 0 0 color.$button;
                     transition: ease-out .2s;
-            
                 }
             }
         }
@@ -994,7 +823,7 @@ nav {
                 position: absolute;
                 left: 39rem;
                 font-size: 1.3rem;
-                color: color.$brown;
+                color: color.$button;
                 @include lg {
                     left: 14.5rem;
                     padding-top: 0.4rem;
@@ -1022,6 +851,142 @@ nav {
             }
         }
     }
+}
+
+.contact {
+    .container {
+        @include xs {
+            margin: 0;
+        }
+    }
+    background-image: color.$hero;
+    background-repeat: no-repeat; 
+    background-size: 100%;
+    padding-bottom: 6rem;
+    @include lg {
+        background-size: 150%;
+    }
+    @include md {
+        background-repeat: repeat;
+    }
+   
+    
+    
+    &__title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 4rem;
+        
+    }
+    .section-maintitle {
+        text-transform: uppercase;
+        font-weight: 600;
+        color: color.$button;
+        @include xs {
+            font-size: 0.9rem;
+        }
+    }
+    .section-subtitle {
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin: 17px 0px 22px;
+        line-height: 48px;
+        color: color.$white;
+        padding-bottom: 2rem;
+        max-width: 60%;
+        text-align: center;
+        @include md {
+            max-width: 100%;
+        }
+        @include xs {
+            font-size: 1.8rem;
+            line-height: 32px;
+            max-width: 100%;
+        }
+    }
+
+    form {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 16px;
+            @include md {
+                grid-template-columns: 1fr;
+                // display: flex;
+                // flex-direction: column;
+            }
+            @include xs {
+                grid-template-columns: 1fr;
+                margin: 0rem 1rem 0rem 1rem;
+            }
+            .input {
+                // margin-right: 2.5rem;
+                display: inherit;
+                &.full {
+                    grid-column: 1 / -1;
+                    min-width: 100%;
+                }
+
+                label {
+                    display: block;
+                    margin-bottom: 5px;
+                    color: color.$contact;
+                    font-size: 0.938rem;
+                    line-height: 28px;
+                    text-transform: uppercase;
+                    margin-bottom: 0.2rem;
+                }
+                .form-element {
+                    appearance: none;
+                    outline: none;
+                    border: none;
+
+                    display: block;
+                    // min-width: 100%;
+                    border-radius: 8px;
+                    padding: 20px 19px;
+                    @include xs {
+                        // padding: 20px 0px;
+                    }
+                    &:focus {
+                        outline: 2px solid color.$button;
+                    }
+                }
+                textarea {
+                    resize: vertical;
+                    min-height: 10rem;
+                    font-size: 1rem;
+                }
+                input {
+                    font-size: 1rem;
+                }
+            }
+            .submit-group {
+                grid-column: 1 / -1;
+                input[type="submit"] {
+                    appearance: none;
+                    border: none;
+                    outline: none;
+                    background: none;
+
+                    padding: 1.7rem 2rem;
+                    background-color: color.$button;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: 0.4s;
+                    color: color.$white;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    min-width: 100%;
+                    font-size: 1.1rem;
+                    margin-top: 1.5rem;
+                    &:hover {
+                        // background-color: ;
+                    }
+                }
+            }
+    }
+    
 }
 
 footer {
@@ -1099,7 +1064,7 @@ footer {
             }
             i {
                 margin-right: 0.6rem;
-                color: color.$brown;
+                color: color.$button;
             }
         }
 

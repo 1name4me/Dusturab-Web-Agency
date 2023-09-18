@@ -6,11 +6,12 @@
     <!-- <link rel="stylesheet" href="./styles/styles.scss">
     <link rel="stylesheet" href="./styles/reset.css"> -->
     @vite(['resources/sass/styles.scss', 'resources/sass/reset.css','resources/js/app.js'])
+    <link rel="icon" type="image/x-icon" href="/images/logowhite.png">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"> 
     <link href="https://db.onlinewebfonts.com/c/bb018e64d01355748d8ddc53553850b9?family=Cerebri+Sans+Regular" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <title>DT Agency</title>
+    <title>Dusturab</title>
 </head>
 <body>
         <!-- section that have the navbar -->
@@ -62,15 +63,6 @@
     <!-- about us section -->
     
     <section class="about" id="about">
-
-        <!-- <svg class="separator" width="100%" height="40" viewBox="0.1 0.1 180 40" preserveAspectRatio="none">
-            <g transform="translate(-18.298844, -77.973964)">
-                <path style="fill:#1F2740;" d="M 31.615583,86.351641 H 192.16499 v 26.901969 c 0,0 -32.03411,-14.237983 -59.62682,-12.72484 -22.34188,1.2252 -54.779359,9.72634 -54.779359,9.72634 0,0 -22.029534,3.62882 -34.471238,-1.88988 -12.441702,-5.51871 -11.67199,-22.013589 -11.67199,-22.013589 z" />
-                <path style="fill:#1F2740;" d="M 18.441597,78.106256 H 198.58126 v 39.288614 c 0,0 -43.10672,-27.825245 -73.47599,-19.687823 -30.369264,8.137423 -46.832208,12.548653 -46.832208,12.548653 0,0 -32.775418,8.05972 -46.735258,0 C 17.577964,102.19598 18.441597,78.106256 18.441597,78.106256 Z" />
-            </g>
-        </svg> -->
-
-
         <div class="container">
             <div class="about__container">
                 <div class="about__container-grid1">
@@ -79,17 +71,15 @@
                     <p class="about__description">Let's face it, a lot of websites suck. We are trying to change that by making every website 
                     designed with purpose and meaning that are guaranteed to create a better experience for the users of the website.
                     </p>
-                    <!-- <a href="#" class="about">about us</a> -->
                 </div>
-                <div class="about__container-grid2">
-                    <img src="/images/hero/RR-v-july-2022-11.webp">
-                </div>
+                <!-- <div class="about__container-grid2">
+                    <img src="/images/hero/RR-v-july-2022-11-1.webp">
+                </div> -->
                 <div class="about__container-grid3">
                     <p class="about__description">A lot of websites dont follow both basic and advanced UX design practices, This causes the website to be less converting (loss of sales & leads),
                         harder to use, harder to understand, and overall less effective. I aim to prevent this with the way I design websites.
                     </p>
                     <span class="about__description">My goal is to make the Internet a more beautiful and usable place, one website at a time.</span>
-                    <div class="company-name">Dusturab</div>
                 </div>
             </div>
         </div>
@@ -215,8 +205,9 @@
                     <div class="price-card__reason">Designed to get your business started online.</div>
                     <hr>
                         <ul>
-                            <li class="standard">Basic Contact Form</li>
-                            <li class="standard">2 Rounds Of Revisions</li>
+                            <li class="standard">Beautifully Designed Website</li>
+                            <li class="standard">Great User Experience</li>
+                            <li class="standard">Accessible</li>
                             <li class="standard">Basic Speed Optimization</li>
                             <li class="standard">SEO Fundamentals</li>
                         </ul>
@@ -234,10 +225,10 @@
                     <div class="price-card__reason">Designed to stand out from your competitors.</div>
                     <hr>
                         <ul>
+                            <li class="standard">Beautifully Designed Website</li>
+                            <li class="standard">Great User Experience</li>
                             <li class="standard">Advanced Speed Optimization</li>
-                            <li class="standard">Advanced Contact Form</li>
                             <li class="standard">2 Rounds Of Revisions</li>
-                            <li class="standard">Basic Speed Optimization</li>
                             <li class="standard">SEO Optimized</li>
                             <li class="standard">Custom Functionality</li>
                         </ul>
@@ -250,15 +241,18 @@
 
                 <div class="price-card">
                     <img src="/images/white-helmet-svg-1.png" alt="">
-                    <div class="price-card__title">Standard Website</div>
-                    <div class="price-card__description">A website with limited design customization and basic features.</div>
-                    <div class="price-card__reason">Designed to get your business started online.</div>
+                    <div class="price-card__title">E-Commerce Website</div>
+                    <div class="price-card__description">A E-Commerce website with a lot of design customization with more advanced features.</div>
+                    <div class="price-card__reason">Designed to make you sales online.</div>
                     <hr>
                         <ul>
-                            <li class="standard">Basic Contact Form</li>
+                            <li class="standard">Beautifully Designed Website</li>
+                            <li class="standard">Great User Experience</li>
+                            <li class="standard">E-Commerce Functionality</li>
+                            <li class="standard">Advanced Speed Optimization</li>
                             <li class="standard">2 Rounds Of Revisions</li>
-                            <li class="standard">Basic Speed Optimization</li>
-                            <li class="standard">SEO Fundamentals</li>
+                            <li class="standard">SEO Optimized</li>
+                            <li class="standard">Custom Functionality</li>
                         </ul>
                     <hr>
                     <div class="price-card__extra"><strong>*Plus $100/per Website Page</strong></div>
@@ -274,8 +268,6 @@
 
 
     <section class="design-process">
-
-        
 
         <div class="container">
             <div class="design-process__title">
@@ -341,15 +333,15 @@
                 <div class="reason-container">
                     <div class="reason-container__title">It will be very easy for your customers to contact you</div>
                     <p class="reason-container__description">
-                        A bad outdated website design can easily dissuade people from going with your business. 
-                        A properly designed and modern website will let them know you’re open and ready to sell them on your product/service.
+                    If not carefully looked at a website can very easily be annoying for users to use, resulting in them leaving your website. 
+                    That’s why UX (user experience) design is so important to get right on every page.
                     </p>
                 </div>
                 <div class="reason-container">
                     <div class="reason-container__title">They will understand what you do and who you are</div>
                     <p class="reason-container__description">
-                        A bad outdated website design can easily dissuade people from going with your business. 
-                        A properly designed and modern website will let them know you’re open and ready to sell them on your product/service.
+                    How many times have you been on a website and thought to yourself, “what do you do?” because their website isn’t intuitive. 
+                    This is a big problem, which is why I design websites specifically around this.
                     </p>
                 </div>
             </div>
@@ -470,45 +462,43 @@
 
     <section class="contact" id="contact">
         <div class="container">
-            
             <div class="contact__title">
                 <div class="section-maintitle">contact us</div>
                 <div class="section-subtitle">Let's start the dicussion for your website project!</div>
             </div>
-        @if (Session::has('success'))
-            <div class="alert" style="color: blue" >
+            @if (Session::has('success'))
+            <div class="alert" style="color: white; background-color: #B3F071; padding: 1rem .5rem; border-radius: 8px; margin-bottom: 1rem;" >
                 {{Session::get('success')}}
             </div>
-        @endif
-        <form action=" {{ route('send_mail') }} " method="POST">
-            @csrf    
-            <div class="input">
-                <label for="input__title">name*</label>
-                <input type="text" name="name" id="firstname" class="form-element" required placeholder="Name" />
-                <i></i>
-            </div>
-            <div class="input">
-                <label for="input__title">email*</label>
-                <input type="email" name="email" id="email" class="form-element" required placeholder="johndoe@exmaple.com" />
-                <i></i>
-            </div>
-            <div class="input">
-                <label for="input__title">phone</label>
-                <input type="text" name="phone" id="phone" class="form-element" placeholder="Phone" />
-                <i></i>
-            </div>
-            <div class="input full">
-                <label for="input__title">Message*</label>
-                <textarea name="message" id="message" class="form-element"
-                    placeholder="Talk about your website project. Any requirements, ideas, goals, or examples to get the discussion started.">
-                </textarea>
-            </div>
-            <div class="submit-group">
-                <input type="submit" value="send message (We'll reply back!)">
-            </div>
-        </form>
+            @endif
+            <form action=" {{ route('send_mail') }} " method="POST">
+                @csrf    
+                <div class="input">
+                    <label for="input__title">name*</label>
+                    <input type="text" name="name" id="firstname" class="form-element" required placeholder="Name" />
+                    <i></i>
                 </div>
-            </section>
+                <div class="input">
+                    <label for="input__title">email*</label>
+                    <input type="email" name="email" id="email" class="form-element" required placeholder="johndoe@exmaple.com" />
+                    <i></i>
+                </div>
+                <div class="input">
+                    <label for="input__title">phone</label>
+                    <input type="text" name="phone" id="phone" class="form-element" placeholder="Phone" />
+                    <i></i>
+                </div>
+                <div class="input full">
+                    <label for="input__title">Message*</label>
+                    <textarea name="message" id="message" class="form-element" required placeholder="Talk about your website project. Any requirements, ideas, goals, or examples to get the discussion started."></textarea>
+                </div>
+                <div class="submit-group">
+                    <input type="submit" value="send message">
+                </div>
+            </form>
+        </div>
+    </section>
+
 
     <footer>
         <div class="container">
