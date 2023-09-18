@@ -467,7 +467,7 @@
                 <div class="section-subtitle">Let's start the dicussion for your website project!</div>
             </div>
             @if (Session::has('success'))
-            <div class="alert" style="color: white; background-color: #B3F071; padding: 1rem .5rem; border-radius: 8px; margin-bottom: 1rem;" >
+            <div class="alert" style="color: white; background-color: green; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;" >
                 {{Session::get('success')}}
             </div>
             @endif
