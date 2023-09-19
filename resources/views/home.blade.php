@@ -242,7 +242,7 @@
                 <div class="price-card">
                     <img src="/images/white-helmet-svg-1.png" alt="">
                     <div class="price-card__title">E-Commerce Website</div>
-                    <div class="price-card__description">A E-Commerce website with a lot of design customization with more advanced features.</div>
+                    <div class="price-card__description">A E-Commerce website with a custom design and full features.</div>
                     <div class="price-card__reason">Designed to make you sales online.</div>
                     <hr>
                         <ul>
@@ -471,6 +471,7 @@
                 {{Session::get('success')}}
             </div>
             @endif
+
             <form action=" {{ route('send_mail') }} " method="POST">
                 @csrf    
                 <div class="input">

@@ -27,25 +27,20 @@ class ContactFormController extends Controller
         $senderMessage = 'Thanks for contacting us, we will get back to you as soon as possible!';
         return redirect()->to('/'.'#contact')->with('success', 'Thanks for contacting us, we will get back to you as soon as possible!');
 
-        //Form validation 
-
-        // $request->validate([
-        //     'name' => 'required',
-        //     'email' => 'required|email',
-        //     'phone' => 'required|digits:10|numeric',
-        //     'message' => 'required'
-        // ]);
-
+    
         // store the data in the database
 
-        // Contact::insert($name, $email, $phone, $message);
-
-        // Contact::create([
-        //     'name' => $request->name,
-        //     'email' => $request->email,
-        //     'phone' => $request->phone,
-        //     'message' => $request->message
+        // $data = Contact::insert([
+        //     'name' => $name,
+        //     'email' => $email,
+        //     'phone' => $phone,
+        //     'message' => $message
         // ]);
-
+        // if ($data) echo '<h1>sent data to database</h1>';
+        // else echo '<h1>error sending</h1>';
+      
     }
+
+    
+
 }
