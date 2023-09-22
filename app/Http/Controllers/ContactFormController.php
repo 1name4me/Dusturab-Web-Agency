@@ -19,7 +19,7 @@ class ContactFormController extends Controller
         $message = $request->message;
         
         $mailData = [
-            'url' => 'http://127.0.0.1:8000',
+            'url' => 'http://dusturab.com',
         ];
         // send mail to admin
         $send_mail = 'omarbernardot@gmail.com';
@@ -30,17 +30,11 @@ class ContactFormController extends Controller
     
         // store the data in the database
 
-        // $data = Contact::insert([
-        //     'name' => $name,
-        //     'email' => $email,
-        //     'phone' => $phone,
-        //     'message' => $message
-        // ]);
-        // if ($data) echo '<h1>sent data to database</h1>';
-        // else echo '<h1>error sending</h1>';
-      
-    }
+        // $contactInfo = new Contact;
+        // $contactInfo->name = $request->name;
+        // echo $contactInfo->save();
 
-    
+        // Contact::create(['name' => 'bobby']);
+    }
 
 }

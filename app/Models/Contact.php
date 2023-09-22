@@ -8,8 +8,8 @@ use Mail;
 
 class Contact extends Model
 {
-    use HasFactory;
-    
-    public $fillable = ['name', 'email', 'phone', 'message'];
+    // use HasFactory;
+    protected $table = 'contacts';
 
+    public $fillable = ['name', 'email', 'phone', 'message'];
 }
